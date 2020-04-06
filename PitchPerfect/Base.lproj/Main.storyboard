@@ -67,25 +67,25 @@
         <scene sceneID="2wQ-ja-KsW">
             <objects>
                 <viewController id="CUA-ID-tG3" customClass="PlayAudioController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ljx-CX-G8y">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ljx-CX-G8y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R3y-Qu-cye">
-                                <rect key="frame" x="16" y="104" width="382" height="742"/>
+                                <rect key="frame" x="16" y="100" width="64" height="256"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7fp-TK-Rki">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nho-sx-OM3" userLabel="Snail Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="247.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="64"/>
                                                 <state key="normal" image="Slow"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="CUA-ID-tG3" eventType="touchUpInside" id="oK8-wP-ERi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arZ-UF-h0X" userLabel="Rabbit Button">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="247.5"/>
+                                                <rect key="frame" x="32" y="0.0" width="32" height="64"/>
                                                 <state key="normal" image="Fast"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="CUA-ID-tG3" eventType="touchUpInside" id="Xk6-pv-243"/>
@@ -94,17 +94,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kha-xS-hFh">
-                                        <rect key="frame" x="0.0" y="247.5" width="382" height="247"/>
+                                        <rect key="frame" x="0.0" y="64" width="64" height="64"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAS-t3-Uyx" userLabel="Chipmunk Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="247"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="64"/>
                                                 <state key="normal" image="HighPitch"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="CUA-ID-tG3" eventType="touchUpInside" id="D43-wp-3a9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qlg-MT-Pgy" userLabel="Darth Vader Button">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="247"/>
+                                                <rect key="frame" x="32" y="0.0" width="32" height="64"/>
                                                 <state key="normal" image="LowPitch"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="CUA-ID-tG3" eventType="touchUpInside" id="rMg-vq-8Ct"/>
@@ -113,17 +113,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="H5U-nr-RsS">
-                                        <rect key="frame" x="0.0" y="494.5" width="382" height="247.5"/>
+                                        <rect key="frame" x="0.0" y="128" width="64" height="64"/>
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yt-tR-qBF" userLabel="Echo Button">
-                                                <rect key="frame" x="0.0" y="0.0" width="191" height="247.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="64"/>
                                                 <state key="normal" image="Echo"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="CUA-ID-tG3" eventType="touchUpInside" id="dBu-o3-m1X"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMe-Q7-z1j" userLabel="Reverb Button">
-                                                <rect key="frame" x="191" y="0.0" width="191" height="247.5"/>
+                                                <rect key="frame" x="32" y="0.0" width="32" height="64"/>
                                                 <state key="normal" image="Reverb"/>
                                                 <connections>
                                                     <action selector="playSoundForButton:" destination="CUA-ID-tG3" eventType="touchUpInside" id="j2D-8r-dW9"/>
@@ -131,28 +131,27 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ean-Cv-lvF" userLabel="Stop Button">
+                                        <rect key="frame" x="0.0" y="192" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="7Sn-7E-0dG"/>
+                                            <constraint firstAttribute="height" constant="64" id="C6x-K2-akR"/>
+                                        </constraints>
+                                        <state key="normal" image="Stop"/>
+                                        <connections>
+                                            <action selector="stopButtonPressed:" destination="CUA-ID-tG3" eventType="touchUpInside" id="nCJ-Kw-dln"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ean-Cv-lvF" userLabel="Stop Button">
-                                <rect key="frame" x="175" y="790" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="62B-OT-t4A"/>
-                                    <constraint firstAttribute="width" constant="64" id="ynq-Xi-frn"/>
-                                </constraints>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="stopButtonPressed:" destination="CUA-ID-tG3" eventType="touchUpInside" id="nCJ-Kw-dln"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="R3y-Qu-cye" firstAttribute="leading" secondItem="cL6-Pp-56J" secondAttribute="leading" constant="16" id="4Tv-IS-KXX"/>
-                            <constraint firstItem="R3y-Qu-cye" firstAttribute="top" secondItem="cL6-Pp-56J" secondAttribute="top" constant="16" id="B7E-Zg-fhS"/>
-                            <constraint firstItem="ean-Cv-lvF" firstAttribute="centerX" secondItem="R3y-Qu-cye" secondAttribute="centerX" id="SAf-Zc-F2E"/>
-                            <constraint firstItem="cL6-Pp-56J" firstAttribute="trailing" secondItem="R3y-Qu-cye" secondAttribute="trailing" constant="16" id="Ung-HC-WdR"/>
-                            <constraint firstItem="cL6-Pp-56J" firstAttribute="bottom" secondItem="R3y-Qu-cye" secondAttribute="bottom" constant="16" id="a1U-LD-fhg"/>
-                            <constraint firstItem="ean-Cv-lvF" firstAttribute="bottom" secondItem="R3y-Qu-cye" secondAttribute="bottom" constant="8" id="o62-Sh-ANy"/>
+                            <constraint firstItem="ean-Cv-lvF" firstAttribute="centerX" secondItem="cL6-Pp-56J" secondAttribute="centerX" id="6qB-eN-dKB"/>
+                            <constraint firstItem="R3y-Qu-cye" firstAttribute="top" secondItem="cL6-Pp-56J" secondAttribute="top" constant="12" id="Vsg-89-z23"/>
+                            <constraint firstItem="cL6-Pp-56J" firstAttribute="bottom" secondItem="ean-Cv-lvF" secondAttribute="bottom" constant="16" id="YAW-1S-g2Z"/>
+                            <constraint firstItem="cL6-Pp-56J" firstAttribute="trailing" secondItem="R3y-Qu-cye" secondAttribute="trailing" constant="16" id="aBh-rB-tBM"/>
+                            <constraint firstItem="R3y-Qu-cye" firstAttribute="leading" secondItem="cL6-Pp-56J" secondAttribute="leading" constant="16" id="gaS-Nc-spu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cL6-Pp-56J"/>
                     </view>
