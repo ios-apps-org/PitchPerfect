@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GV8-jn-LC7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,39 +15,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-Df-wCF">
-                                <rect key="frame" x="129.5" y="397.5" width="155" height="155"/>
-                                <state key="normal" image="RecordButton"/>
-                                <connections>
-                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdq-GL-m1Q"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq8-Ew-bAB">
-                                <rect key="frame" x="154" y="571.5" width="106.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWa-J7-7K5" userLabel="Stop Recording Button">
-                                <rect key="frame" x="175" y="613.5" width="64" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="7DJ-j7-phR"/>
-                                    <constraint firstAttribute="width" constant="64" id="VIw-0e-myg"/>
-                                </constraints>
-                                <state key="normal" image="Stop"/>
-                                <connections>
-                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sE7-sJ-2ht"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pDO-sF-X5X" userLabel="mainStackView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fu-DX-u8a" userLabel="recordLayout">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qs-Df-wCF" userLabel="recordButton">
+                                                <rect key="frame" x="149.5" y="71.5" width="115" height="115"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="115" id="2F4-TM-oSa"/>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="115" id="8CV-X9-M3a"/>
+                                                </constraints>
+                                                <state key="normal" image="RecordButton"/>
+                                                <connections>
+                                                    <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdq-GL-m1Q"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3qs-Df-wCF" firstAttribute="centerX" secondItem="8fu-DX-u8a" secondAttribute="centerX" id="IlD-Lp-lCl"/>
+                                            <constraint firstItem="3qs-Df-wCF" firstAttribute="centerY" secondItem="8fu-DX-u8a" secondAttribute="centerY" id="Xmz-9i-bY8"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zw-cB-R0h" userLabel="labelLayout">
+                                        <rect key="frame" x="0.0" y="258" width="414" height="258"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq8-Ew-bAB" userLabel="recordingLabel">
+                                                <rect key="frame" x="154" y="119" width="106.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="sq8-Ew-bAB" firstAttribute="centerX" secondItem="2zw-cB-R0h" secondAttribute="centerX" id="8NF-Xb-NXZ"/>
+                                            <constraint firstItem="sq8-Ew-bAB" firstAttribute="centerY" secondItem="2zw-cB-R0h" secondAttribute="centerY" id="vM2-ul-dnj"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eza-mP-xQk" userLabel="stopLayout">
+                                        <rect key="frame" x="0.0" y="516" width="414" height="258"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EWa-J7-7K5" userLabel="stopButton">
+                                                <rect key="frame" x="175" y="97" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="7DJ-j7-phR"/>
+                                                    <constraint firstAttribute="width" constant="64" id="VIw-0e-myg"/>
+                                                </constraints>
+                                                <state key="normal" image="Stop"/>
+                                                <connections>
+                                                    <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sE7-sJ-2ht"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="EWa-J7-7K5" firstAttribute="centerY" secondItem="eza-mP-xQk" secondAttribute="centerY" id="H3f-z1-iB2"/>
+                                            <constraint firstItem="EWa-J7-7K5" firstAttribute="centerX" secondItem="eza-mP-xQk" secondAttribute="centerX" id="i2H-KU-JbN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="3qs-Df-wCF" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NMl-iU-B3O"/>
-                            <constraint firstItem="EWa-J7-7K5" firstAttribute="top" secondItem="sq8-Ew-bAB" secondAttribute="bottom" constant="21" id="O9e-Z5-puQ"/>
-                            <constraint firstItem="sq8-Ew-bAB" firstAttribute="centerX" secondItem="3qs-Df-wCF" secondAttribute="centerX" id="Ptp-Tm-o3f"/>
-                            <constraint firstItem="3qs-Df-wCF" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="T9j-g8-QSH"/>
-                            <constraint firstItem="EWa-J7-7K5" firstAttribute="centerX" secondItem="sq8-Ew-bAB" secondAttribute="centerX" id="YZS-dF-jIb"/>
-                            <constraint firstItem="sq8-Ew-bAB" firstAttribute="top" secondItem="3qs-Df-wCF" secondAttribute="bottom" constant="19" id="h1U-TE-EKO"/>
+                            <constraint firstItem="pDO-sF-X5X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GrJ-ef-0D0"/>
+                            <constraint firstItem="pDO-sF-X5X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ldj-g8-Jn9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pDO-sF-X5X" secondAttribute="bottom" id="iBu-K1-BDH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pDO-sF-X5X" secondAttribute="trailing" id="szK-oB-XOn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -71,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Wv-cX-PfR">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Wv-cX-PfR" userLabel="playStackView">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1HS-wS-H48">
@@ -131,23 +168,35 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGZ-64-PF3">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyJ-e6-h4Q" userLabel="stopLayout">
                                         <rect key="frame" x="0.0" y="580.5" width="414" height="193.5"/>
-                                        <state key="normal" image="Stop"/>
-                                        <connections>
-                                            <action selector="stopButtonPressed:" destination="CUA-ID-tG3" eventType="touchUpInside" id="nJX-lv-KnI"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGZ-64-PF3" userLabel="stopButton">
+                                                <rect key="frame" x="175" y="65" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="Pph-nI-nun"/>
+                                                    <constraint firstAttribute="width" constant="64" id="zf3-C7-XFd"/>
+                                                </constraints>
+                                                <state key="normal" image="Stop"/>
+                                                <connections>
+                                                    <action selector="stopButtonPressed:" destination="CUA-ID-tG3" eventType="touchUpInside" id="nJX-lv-KnI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="oGZ-64-PF3" firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="AyJ-e6-h4Q" secondAttribute="centerY" id="FOE-qN-PXI"/>
+                                            <constraint firstItem="oGZ-64-PF3" firstAttribute="centerX" relation="greaterThanOrEqual" secondItem="AyJ-e6-h4Q" secondAttribute="centerX" id="Gnq-Ks-NHw"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="cL6-Pp-56J" firstAttribute="bottom" secondItem="oGZ-64-PF3" secondAttribute="bottom" id="B6A-15-5tf"/>
-                            <constraint firstItem="cL6-Pp-56J" firstAttribute="trailing" secondItem="1Wv-cX-PfR" secondAttribute="trailing" id="EOo-3m-SGB"/>
-                            <constraint firstItem="cL6-Pp-56J" firstAttribute="bottom" secondItem="oGZ-64-PF3" secondAttribute="bottom" id="cLE-AE-ZWs"/>
-                            <constraint firstItem="1Wv-cX-PfR" firstAttribute="top" secondItem="cL6-Pp-56J" secondAttribute="top" id="qsb-Yf-Bwl"/>
-                            <constraint firstItem="1Wv-cX-PfR" firstAttribute="leading" secondItem="cL6-Pp-56J" secondAttribute="leading" id="rjh-Ff-xOn"/>
+                            <constraint firstItem="1Wv-cX-PfR" firstAttribute="leading" secondItem="cL6-Pp-56J" secondAttribute="leading" id="2hs-DV-ZgD"/>
+                            <constraint firstItem="cL6-Pp-56J" firstAttribute="bottom" secondItem="1Wv-cX-PfR" secondAttribute="bottom" id="BzL-50-TJU"/>
+                            <constraint firstItem="cL6-Pp-56J" firstAttribute="trailing" secondItem="1Wv-cX-PfR" secondAttribute="trailing" id="OD1-Vh-7Oh"/>
+                            <constraint firstItem="1Wv-cX-PfR" firstAttribute="top" secondItem="cL6-Pp-56J" secondAttribute="top" id="YT5-1r-2PT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cL6-Pp-56J"/>
                     </view>
@@ -164,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9g-rO-FtI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1547" y="36"/>
+            <point key="canvasLocation" x="1546.376811594203" y="34.151785714285715"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W9X-5o-13u">
