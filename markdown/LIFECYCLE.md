@@ -30,7 +30,7 @@
 
 - App is still in memory
 - But cannot execute any code
-- When use comes back to app:
+- When user comes back to app:
   - Goes back to Background state
   - Then to Inactive state
   - Back to being Active

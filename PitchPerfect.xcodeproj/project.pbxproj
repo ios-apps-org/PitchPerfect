@@ -61,17 +61,41 @@
 		1636C06B2436CA540004FAD5 /* PitchPerfect */ = {
 			isa = PBXGroup;
 			children = (
+				E6EFFD2E24D4AD020098DED1 /* Assets */,
+				E6EFFD3024D4AD4E0098DED1 /* Controllers */,
+				E6EFFD2F24D4AD210098DED1 /* Storyboards */,
 				1636C06C2436CA540004FAD5 /* AppDelegate.swift */,
 				1636C06E2436CA540004FAD5 /* SceneDelegate.swift */,
-				1636C0702436CA540004FAD5 /* RecordAudioController.swift */,
-				1636C0722436CA540004FAD5 /* Main.storyboard */,
-				1636C0752436CA550004FAD5 /* Assets.xcassets */,
-				1636C0772436CA550004FAD5 /* LaunchScreen.storyboard */,
 				1636C07A2436CA550004FAD5 /* Info.plist */,
+			);
+			path = PitchPerfect;
+			sourceTree = "<group>";
+		};
+		E6EFFD2E24D4AD020098DED1 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1636C0752436CA550004FAD5 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		E6EFFD2F24D4AD210098DED1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1636C0722436CA540004FAD5 /* Main.storyboard */,
+				1636C0772436CA550004FAD5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E6EFFD3024D4AD4E0098DED1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1636C0702436CA540004FAD5 /* RecordAudioController.swift */,
 				16FCC436243809460046F7CA /* PlayAudioController.swift */,
 				16FCC43A243827E30046F7CA /* PlayAudioController+Audio.swift */,
 			);
-			path = PitchPerfect;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
