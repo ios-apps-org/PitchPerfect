@@ -16,4 +16,8 @@
 ## Projects
 
 - [PitchPerfect](https://github.com/jdemaagd/PitchPerfect)
+- [MemeMe](https://github.com/jdemaagd/MemeMe2.0)
+- [OnMap](https://github.com/jdemaagd/OnMap)
+- [VirtualTourist](https://github.com/jdemaagd/VirtualTourist)
+- [MyRun](https://github.com/jdemaagd/MyRun)
 
